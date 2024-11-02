@@ -143,7 +143,7 @@ const HeroSection = () => {
                 </div>
             </motion.div>
 
-            {/* Fixed Red Bar Section */}
+            {/* Fixed Yellow Bar Section */}
             <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-3/5 bg-yellow-500 p-4 flex items-center justify-center"> {/* Adjusted width */}
                 {/* Icons section */}
                 <div className="flex space-x-8"> {/* Adjusted space between icons */}

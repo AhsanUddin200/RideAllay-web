@@ -1,13 +1,17 @@
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Service from '../../public/service.png';
 
 const CarServicesPage = () => {
   const services = [
-    { name: 'Mechanical Works' },
-    { name: 'Modifications' },
-    { name: 'Electrical Works' },
-    { name: 'Inspections' },
-    { name: 'Body Works' },
-    { name: 'Engine Tune-up' }
+    { name: "Mechanical Repairs" },
+    { name: "Custom Modifications" },
+    { name: "Electrical Diagnostics" },
+    { name: "Comprehensive Inspections" },
+    { name: "Bodywork & Paint" },
+    { name: "Engine Performance Tune-up" },
+    { name: "Tire Rotation & Balancing" },
+    { name: "Brake System Services" },
   ];
 
   return (
@@ -16,57 +20,28 @@ const CarServicesPage = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Car Illustration */}
           <div className="w-full lg:w-1/2 animate-float">
-            <svg
-              viewBox="0 0 400 300"
-              className="w-full max-w-lg mx-auto"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M50,200 L350,200 L320,100 L80,100 Z"
-                className="fill-red-500"
-              />
-              <rect
-                x="70"
-                y="120"
-                width="260"
-                height="100"
-                className="fill-red-500"
-              />
-              <rect
-                x="100"
-                y="80"
-                width="200"
-                height="40"
-                className="fill-white"
-              />
-              <rect
-                x="85"
-                y="140"
-                width="230"
-                height="60"
-                className="fill-white"
-              />
-              <path
-                d="M80,200 L320,200 C320,240 280,260 250,260 L150,260 C120,260 80,240 80,200 Z"
-                className="fill-red-500"
-              />
-            </svg>
+            <Image
+              src={Service}
+              alt="Car Illustration"
+              className="h-[500px] object-contain mx-auto" // Adjust height as needed
+              width={900} // Set specific width
+              height={500} // Set specific height
+            />
           </div>
 
           {/* Content */}
-          <div className="w-full lg:w-1/2 space-y-6">
+          <div className="w-full lg:w-1/2 space-y-2">
             <div>
-              <span className="text-red-500 font-semibold text-lg">
+              <span className="text-yellow-500 font-medium">
                 OUR SERVICES
               </span>
-              <h1 className="mt-2 text-4xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-2xl font-bold text-gray-900 leading-tight mt-5">
                 CAR REPAIR & MAINTENANCE SERVICES
               </h1>
             </div>
 
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Our garage services cater to the needs of vehicle owners in Karachi,
-              providing comprehensive solutions for all automotive requirements.
+            <p className="text-gray-600 text-sm">
+            We proudly serve the vehicle owners of Karachi, delivering expert automotive services tailored to meet your every need. Experience unparalleled quality and reliability with us.
             </p>
 
             {/* Services Grid */}
@@ -74,9 +49,9 @@ const CarServicesPage = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                  className="flex items-center gap-2 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
                 >
-                  <ArrowRight className="w-5 h-5 text-red-500" />
+                  <ArrowRight className="w-5 h-5 text-yellow-500" />
                   <span className="font-medium text-gray-800">
                     {service.name}
                   </span>
@@ -90,7 +65,7 @@ const CarServicesPage = () => {
       {/* Contact Button */}
       <a
         href="#contact"
-        className="fixed bottom-8 right-8 bg-red-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:-translate-y-1 transition-transform duration-200"
+        className="fixed bottom-8 right-8 bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:-translate-y-1 transition-transform duration-200"
       >
         Contact Us
       </a>
