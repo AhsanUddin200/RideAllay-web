@@ -114,7 +114,7 @@ const ContactPage = () => {
                   </div>
 
                   <button type="submit" className="w-full bg-yellow-600 text-white py-3 rounded hover:bg-yellow-700 transition-colors">
-                    BOOK MY APPOINTMENT
+                    BOOK APPOINTMENT NOW 
                   </button>
                 </form>
               </div>
